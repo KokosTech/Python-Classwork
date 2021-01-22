@@ -7,9 +7,9 @@ def profits(days):
             profit += daily_profit
         elif 14 <= day < 30:
             profit += daily_profit + 50
-        elif 14 <= day < 30:
+        elif 30 <= day < 60:
             profit += daily_profit + 80
-        else:
+        elif day >= 60:
             profit += daily_profit + 100
 
     return profit
