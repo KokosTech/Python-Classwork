@@ -51,7 +51,6 @@ def buton_click():
 window = tk.Tk()
 window.geometry("500x300")
 window.title(com.name)
-window['background']='black'
 
 label = tk.Label(text="Welcome to the company")
 label.pack()
