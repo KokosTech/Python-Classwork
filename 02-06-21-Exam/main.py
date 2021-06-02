@@ -22,12 +22,13 @@ class Symbol:
             with open(str(nol) + ".txt", 'w') as f:
                 f.write(line)
 
+    # Rollback to see previous version with indexing every symbol 
+
     def sym_num(self):
         self.nos = 0
-        for line in self.lines:
-            for sym in line:
-                if sym in self.symbols:
-                    self.nos += 1 
+        for sym in self.symbols:
+            for line in self.lines:
+                self.nos += line.count(sym)
         print(f"The symbols {self.symbols} are {self.nos}.")
 
 
